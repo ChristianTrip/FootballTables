@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "/Users/macbookpro/.nuget/packages/": {}
+    "/Users/christiantrip/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/macbookpro/RiderProjects/FootballTables/FootballTables/FootballTables.csproj",
+      "projectUniqueName": "/Users/christiantrip/RiderProjects/FootballTables/FootballTables/FootballTables.csproj",
       "projectName": "FootballTables",
-      "projectPath": "/Users/macbookpro/RiderProjects/FootballTables/FootballTables/FootballTables.csproj",
-      "packagesPath": "/Users/macbookpro/.nuget/packages/",
-      "outputPath": "/Users/macbookpro/RiderProjects/FootballTables/FootballTables/obj/",
+      "projectPath": "/Users/christiantrip/RiderProjects/FootballTables/FootballTables/FootballTables.csproj",
+      "packagesPath": "/Users/christiantrip/.nuget/packages/",
+      "outputPath": "/Users/christiantrip/RiderProjects/FootballTables/FootballTables/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/macbookpro/.nuget/NuGet/NuGet.Config"
+        "/Users/christiantrip/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
