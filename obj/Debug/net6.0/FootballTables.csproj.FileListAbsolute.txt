@@ -1,0 +1,15 @@
+/Users/christiantrip/RiderProjects/FootballTables/FootballTables/bin/Debug/net6.0/FootballTables
+/Users/christiantrip/RiderProjects/FootballTables/FootballTables/bin/Debug/net6.0/FootballTables.deps.json
+/Users/christiantrip/RiderProjects/FootballTables/FootballTables/bin/Debug/net6.0/FootballTables.runtimeconfig.json
+/Users/christiantrip/RiderProjects/FootballTables/FootballTables/bin/Debug/net6.0/FootballTables.dll
+/Users/christiantrip/RiderProjects/FootballTables/FootballTables/bin/Debug/net6.0/FootballTables.pdb
+/Users/christiantrip/RiderProjects/FootballTables/FootballTables/obj/Debug/net6.0/FootballTables.csproj.AssemblyReference.cache
+/Users/christiantrip/RiderProjects/FootballTables/FootballTables/obj/Debug/net6.0/FootballTables.GeneratedMSBuildEditorConfig.editorconfig
+/Users/christiantrip/RiderProjects/FootballTables/FootballTables/obj/Debug/net6.0/FootballTables.AssemblyInfoInputs.cache
+/Users/christiantrip/RiderProjects/FootballTables/FootballTables/obj/Debug/net6.0/FootballTables.AssemblyInfo.cs
+/Users/christiantrip/RiderProjects/FootballTables/FootballTables/obj/Debug/net6.0/FootballTables.csproj.CoreCompileInputs.cache
+/Users/christiantrip/RiderProjects/FootballTables/FootballTables/obj/Debug/net6.0/FootballTables.dll
+/Users/christiantrip/RiderProjects/FootballTables/FootballTables/obj/Debug/net6.0/refint/FootballTables.dll
+/Users/christiantrip/RiderProjects/FootballTables/FootballTables/obj/Debug/net6.0/FootballTables.pdb
+/Users/christiantrip/RiderProjects/FootballTables/FootballTables/obj/Debug/net6.0/FootballTables.genruntimeconfig.cache
+/Users/christiantrip/RiderProjects/FootballTables/FootballTables/obj/Debug/net6.0/ref/FootballTables.dll

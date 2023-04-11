@@ -2,8 +2,8 @@ namespace FootballTables.models;
 
 public enum MatchStatus
 {
-    WON = 3,
-    LOST = 0,
-    DRAW = 1
+    Won = 3,
+    Lost = 0,
+    Draw = 1
     
 }

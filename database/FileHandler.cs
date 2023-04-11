@@ -113,17 +113,4 @@ public class FileHandler
         }
     }
 
-    public void DeleteLineById(string id)
-    {
-        var lines = ReadFile();
-        foreach (var line in lines)
-        {
-            if (line.Contains(id))
-            {
-                lines.Remove(line);
-                break;
-            }
-        }
-        WriteLinesToFile(false, lines, "");   
-    }
 }

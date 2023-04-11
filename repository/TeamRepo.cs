@@ -61,14 +61,5 @@ public class TeamRepo: ICrud<Team, string>
         }
         return teams;
     }
-
-    public void Update(Team model)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void Delete(string id)
-    {
-        throw new NotImplementedException();
-    }
+    
 }

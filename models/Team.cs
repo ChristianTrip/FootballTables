@@ -22,7 +22,7 @@ public class Team
          }
       }
    }
-   public int Points { get; set; }
+   public int Points { get; private set; }
    public int GoalsFor { get; set; }
    public int GoalsAgainst { get; set; }
    public int GoalsDifference => GoalsFor - GoalsAgainst;
@@ -45,13 +45,13 @@ public class Team
             {
                switch (Matches[i])
                {
-                  case MatchStatus.WON:
+                  case MatchStatus.Won:
                      sb.Append('W');
                      break;
-                  case MatchStatus.LOST:
+                  case MatchStatus.Lost:
                      sb.Append('L');
                      break;
-                  case MatchStatus.DRAW:
+                  case MatchStatus.Draw:
                      sb.Append('D');
                      break;
                   default:
@@ -71,11 +71,11 @@ public class Team
    }
 
    public int NumberOfGamesPlayed => Matches.Count;
-   public int TimesWon => GetNumberOfTimesMatchStatus(MatchStatus.WON);
+   public int TimesWon => GetNumberOfTimesMatchStatus(MatchStatus.Won);
 
-   public int TimesLost => GetNumberOfTimesMatchStatus(MatchStatus.LOST);
+   public int TimesLost => GetNumberOfTimesMatchStatus(MatchStatus.Lost);
 
-   public int TimesDraw => GetNumberOfTimesMatchStatus(MatchStatus.DRAW);
+   public int TimesDraw => GetNumberOfTimesMatchStatus(MatchStatus.Draw);
 
    public Team(string abbreviation, string name, string specialRanking, string league)
    {
@@ -102,7 +102,7 @@ public class Team
    
    public void AddPoints(int points)
    {
-      if (points >= 0 && points <= 3)
+      if (points is >= 0 and <= 3)
       {
          Points += points;
       }
@@ -112,7 +112,7 @@ public class Team
    {
       var homeGoals = match.HomeTeamGoals;
       var awayGoals = match.AwayTeamGoals;
-      var matchStatus = MatchStatus.DRAW;
+      var matchStatus = MatchStatus.Draw;
       
       if (match.Home.Equals(this.Abbreviation))
       {
@@ -120,11 +120,11 @@ public class Team
          
          if (homeGoals > awayGoals)
          {
-            matchStatus = MatchStatus.WON;
+            matchStatus = MatchStatus.Won;
          }
          else if (homeGoals < awayGoals)
          {
-            matchStatus = MatchStatus.LOST;
+            matchStatus = MatchStatus.Lost;
          }
       }
       if (match.Away.Equals(this.Abbreviation))
@@ -133,11 +133,11 @@ public class Team
          
          if (homeGoals > awayGoals)
          {
-            matchStatus = MatchStatus.LOST;
+            matchStatus = MatchStatus.Lost;
          }
          else if (homeGoals < awayGoals)
          {
-            matchStatus = MatchStatus.WON;
+            matchStatus = MatchStatus.Won;
          }
       }
       
@@ -148,13 +148,13 @@ public class Team
    {
       switch (matchStatus)
       {
-         case MatchStatus.WON:
+         case MatchStatus.Won:
             this.Points += 3;
             break;
-         case MatchStatus.LOST:
+         case MatchStatus.Lost:
             this.Points += 0;
             break;
-         case MatchStatus.DRAW:
+         case MatchStatus.Draw:
             this.Points += 1;
             break;
          default:

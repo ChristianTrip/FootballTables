@@ -39,15 +39,10 @@ public class MatchRepo: ICrud<Match, int>
     {
         throw new NotImplementedException();
     }
-
-    public Dictionary<string, List<Match>> GetAllRounds()
-    {
-        return null;
-    }
+    
 
     public List<Match> GetAll()
     {
-        
         var matches = new List<Match>();
 
         foreach (var element in _fileHandler.ReadFile())
@@ -71,14 +66,5 @@ public class MatchRepo: ICrud<Match, int>
         return matches;
         
     }
-
-    public void Update(Match model)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void Delete(int id)
-    {
-        throw new NotImplementedException();
-    }
+    
 }
