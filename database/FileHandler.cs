@@ -1,28 +1,27 @@
-namespace FootballTables.services;
+namespace FootballTables.database;
 
 public class FileHandler
 {
-    private string _fileLocation;
+    private static readonly string FolderPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
     private string _filePath;
-
-    public FileHandler(string fileLocation, string fileName)
-    {
-        _fileLocation = fileLocation;
-        _filePath = fileLocation + fileName;
-    }
-
-    public FileHandler(string fileName) : this("/Users/christiantrip/RiderProjects/FootballTables/FootballTables/dataFiles/", fileName)
-    {
-    }
     
+    
+    public string FileName
+    {
+        set => _filePath = Path.Combine(FolderPath, "dataFiles", value);
+    }
+   
+    public FileHandler(string fileName)
+    {
+        _filePath = Path.Combine(FolderPath, "dataFiles", fileName);
+    }
     
     public List<string> ReadFile()
     {
         var lines = new List<string>();
-        StreamReader reader = null;
         try
         {
-            reader = new StreamReader(_filePath);
+            var reader = new StreamReader(_filePath);
             var header = reader.ReadLine();
             var line = reader.ReadLine();
             while (line != null)
@@ -37,19 +36,26 @@ public class FileHandler
         }
         finally
         {
-            reader.Close();
+            //reader.Close();
         }
         
         
         return lines;
     }
 
-    public void WriteLineToFile(bool append, string line)
+    public void WriteLineToFile(bool append, string line, string header)
     {
         
-        if (File.Exists(_filePath))
+        if (!File.Exists(_filePath))
         {
-            StreamWriter writer = null;
+            // Create a file to write to.
+            using var writer = File.CreateText(_filePath);
+            writer.WriteLine(header);
+            writer.WriteLine(line);
+        }
+        else if (File.Exists(_filePath))
+        {
+            StreamWriter? writer;
 
             if (append)
             {
@@ -70,25 +76,40 @@ public class FileHandler
         }
     }
 
-    public void WriteLinesToFile(bool append, List<string> lines)
+    public void WriteLinesToFile(bool append, List<string> lines, string header)
     {
-        if (File.Exists(_filePath))
+        if (!File.Exists(_filePath))
         {
-            StreamWriter writer = null;
-            if (append)
-            {
-                writer = File.AppendText(_filePath);
-                Console.WriteLine($"{lines.Count} lines got appended to the file");
-            }
+            using var writer = File.CreateText(_filePath);
+            writer.WriteLine(header);
             foreach (var line in lines)
             {
                 writer.WriteLine(line);
             }
             writer.Close();
         }
-        else
+        else if (File.Exists(_filePath))
         {
-            Console.WriteLine("File doesn't exist");
+            if (!append)
+            {
+                using var writer = File.CreateText(_filePath);
+                writer.WriteLine(header);
+                foreach (var line in lines)
+                {
+                    writer.WriteLine(line);
+                }
+                writer.Close();
+            }
+            else
+            {
+                using var writer = File.AppendText(_filePath);
+                foreach (var line in lines)
+                {
+                    writer.WriteLine(line);
+                }
+                writer.Close();
+                Console.WriteLine($"{lines.Count} lines got appended to the file");
+            }
         }
     }
 
@@ -103,6 +124,6 @@ public class FileHandler
                 break;
             }
         }
-        WriteLinesToFile(false, lines);   
+        WriteLinesToFile(false, lines, "");   
     }
 }

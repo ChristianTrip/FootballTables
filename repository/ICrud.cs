@@ -1,6 +1,5 @@
 
-
-namespace FootballTables.services;
+namespace FootballTables.repository;
 
 public interface ICrud<Model, Id>
 {

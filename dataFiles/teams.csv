@@ -1,16 +1,12 @@
 abbreviation, name, ranking, league
-FCK, Football Club København, W, superligaen
-BIF, Brøndby Idrætsforening, W, superligaen
-FCM, Football Club Midtjylland, W, superligaen
-AGF, Aarhus Gymnastikforening, W, superligaen
-SIF, Silkeborg Idrætsforening, W, superligaen
-VBK, Vejle Boldklub, W, superligaen
-AAB, Aalborg Boldspilklub, W, superligaen
-RFC, Randers Football Club, W, superligaen
-VFF, Viborg Fodsports Forening, W, superligaen
-OB, Odense Boldklub, W, superligaen
-FCN, Football Club Nordsjælland, W, superligaen
-SE, Sønderjysk Elitesport, W, superligaen
+FCK, Football Club København, W, Superligaen
+BIF, Brøndby Idrætsforening, C, Superligaen
+FCM, Football Club Midtjylland, -, Superligaen
+AGF, Aarhus Gymnastikforening, -, Superligaen
+SIF, Silkeborg Idrætsforening, P, Superligaen
+VBK, Vejle Boldklub, -, Superligaen
+AAB, Aalborg Boldspilklub, -, Superligaen
+RFC, Randers Football Club, -, Superligaen
 FCF, FC Fredericia, W, 1. division
 FCH, FC Helsingør, W, 1. division
 FA, Fremad Amager, W, 1. division
@@ -19,7 +15,3 @@ HIF, Hvidovre IF, W, 1. division
 HIK, Hobro IK Fodbold, W, 1. division
 NFC, Nykøbing FC, W, 1. division
 ACH, AC Horsens, W, 1. division
-EFB, Esbjerg FB, W, 1. division
-LBK, Lyngby BK, W, 1. division
-VFF, Vendsyssel FF, W, 1. division
-JFC, Jammerbugt FC, W, 1. division
